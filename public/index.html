@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+    <script src="./vue.js"></script>
+    <link rel="stylesheet" href="./style.css">
+    <script type="text/javascript" src="./jquery.js"> </script>
+    <script>if (typeof module === 'object') { window.jQuery = window.$ = module.exports; };</script>
+</head>
+
+<body>
+    <div id="app">
+        <div class="v">
+            <video class="f" id="bgvid" playsinline="" autoplay muted loop="">
+                <source src="./bg.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="update">
+            <div style="background: rgb(28,28,28);padding: 20px;display: flex;flex-direction: column;width: 400px;">
+                <div style="padding-bottom: 20px;">{{update.code}}...{{(update.progress*100).toFixed(2)}}%</div>
+                <div style="width: 0;height: 5px;background: #f00;transition: 0.3s;"
+                    :style="{'width':update.progress*100+'%'}"> </div>
+            </div>
+        </div>
+        <div class="login">
+            <div style="display: flex;align-items: center;position: fixed;right: 0px;top: 0;padding: 20px;">
+                <div class="ctr_a" @click="mini">
+                    <i class="iconfont">&#xe7fd;</i>
+                </div>
+                <div style="width: 15px;"></div>
+                <div class="ctr_a" @click="quit">
+                    <i class="iconfont">&#xe6d5;</i>
+                </div>
+            </div>
+            <div
+                style="background: rgb(28,28,28);padding: 40px 30px;display: flex;flex-direction: column;width: 400px;">
+                <p style="font-size: 25px;font-weight: bold;color: #ccc;">LOGIN</p>
+                <div style="height: 40px;"></div>
+                <div>
+                    <p>USER NAME</p>
+                    <div style="height: 5px;"></div>
+                    <div class="input_box">
+                        <input v-model="logindata.username" type="text" placeholder="YOUR USER NAME">
+                    </div>
+                </div>
+                <div style="height: 20px;"></div>
+                <div>
+                    <p>PASSWORD</p>
+                    <div style="height: 5px;"></div>
+                    <div class="input_box">
+                        <input v-model="logindata.password" type="text" placeholder="YOUR PASSWORD">
+                    </div>
+                </div>
+                <div style="height: 40px;"></div>
+                <div style="display: flex;justify-content: space-between;align-items: center;">
+                    <div class="button_box" style="width: 100%;padding: 10px 20px;" @click="login">
+                        <div>LOGIN</div>
+                        <div>>></div>
+                    </div>
+                    <a target="view_window" style="padding-left: 30px;flex-shrink: 0;"
+                        href="http://104.168.140.143:888/signup">REGISTER USER</a>
+                </div>
+            </div>
+        </div>
+        <div class="main">
+            <div class="left left_put" @click="main_left_auto_put">
+                <div class="logo_box">
+                    <div class="logo">
+                        <i class="iconfont">&#xe639;</i>
+                        <p style="padding-left: 5px;">LNW</p>
+                    </div>
+                    <p style="font-size: 20px;border-top: 1px solid;">LNW Loader</p>
+                    <p class="logo_t">LNW</p>
+                </div>
+
+                <div class="button_box button_box_in" @click.stop="pageChange">
+                    <div>
+                        <i class="iconfont">&#xe69c;</i>
+                        <div class="tittle">插件支持</div>
+                    </div>
+                </div>
+                <div class="button_box" @click.stop="pageChange">
+                    <div>
+                        <i class="iconfont">&#xe65f;</i>
+                        <div class="tittle">更新日志</div>
+                    </div>
+                </div>
+                <div class="button_box" @click.stop="pageChange">
+                    <div>
+                        <i class="iconfont">&#xe664;</i>
+                        <div class="tittle">关于信息</div>
+                    </div>
+                </div>
+                <div class="button_box" @click.stop="pageChange">
+                    <div>
+                        <i class="iconfont">&#xe632;</i>
+                        <div class="tittle">系统设置</div>
+                    </div>
+                </div>
+                <div class="button_box" @click.stop="pageChange">
+                    <div>
+                        <i class="iconfont">&#xe65d;</i>
+                        <div class="tittle">系统日志</div>
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <div class="header">
+                    <div style="width: 100%;-webkit-app-region: drag;"></div>
+                    <div style="display: flex;align-items: center;flex-shrink: 0;padding: 20px 20px 20px 0;">
+                        <div class="icon_header">
+                            <img style="width: 100%;height: 100%;"
+                                src="https://bpic.588ku.com/element_origin_min_pic/19/08/22/7935a625cf62ad0caeb84fbe0d8cbc05.jpg"
+                                alt="">
+                        </div>
+                        <div style="color: #eee;padding-left: 5px;">Wiser</div>
+                        <div style="height: 70%;border-right: 1px solid #bbb;padding: 0 5px;"></div>
+                        <div style="width: 15px;"></div>
+                        <div class="ctr_a" @click="mini">
+                            <i class="iconfont">&#xe7fd;</i>
+                        </div>
+                        <div style="width: 15px;"></div>
+                        <div class="ctr_a" @click="quit">
+                            <i class="iconfont">&#xe6d5;</i>
+                        </div>
+                    </div>
+                </div>
+                <div class="page">
+                    <div class="page_show" v-show="thispage=='插件支持'">
+                        <p class="page_tittle">{{thispage}}</p>
+                        <div class="tab_box" style="padding: 20px 0 10px;">
+                            <div class="tab_item tab_item_it" @click.stop="heroPosChange">全部</div>
+                            <div v-for="f in hero_pos" :type="f.type" class="tab_item" @click.stop="heroPosChange">
+                                {{f.name}}
+                            </div>
+                        </div>
+                        <div style="height: 0px;"></div>
+                        <div v-show="herolistbox_canshowit(hero)" v-for="hero in herolist" class="hero_showbox">
+                            <div class="picbox">
+                                <img :src="`https://game.gtimg.cn/images/lol/act/img/skinloading/${hero.heroId}000.jpg`"
+                                    alt="">
+                            </div>
+                            <div class="namebox">
+                                {{hero.name}}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page_show" v-show="thispage=='系统日志'"
+                        style="display: flex;flex-direction: column;height: 100%;">
+                        <!-- <p class="page_tittle">{{thispage}}</p> -->
+                        <!-- <div style="height: 20px;flex-shrink: 0;"></div> -->
+                        <div style="width: 100%;display: flex;justify-content: center;flex-shrink: 0;">
+                            <div class="status_box">
+                                <div class="status_box_l4"></div>
+                                <div class="status_box_l3"></div>
+                                <div class="status_box_l2"></div>
+                                <div class="status_box_l1"></div>
+                                <div class="status_box_r1"></div>
+                                <div class="status_box_info">
+                                    <p><i class="status_box_i iconfont">&#xe6a6;</i></p>
+                                    <div>等待注入</div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="r_tittle" style="flex-shrink: 0;">日志</p>
+                        <div style="height: 20px;"></div>
+                        <div style="height: 100%;overflow: scroll;">
+                            <div v-for="t in system_log" style="padding-bottom: 5px;" :style="{
+                                'color':t.type==1?'#0f0':(t.type==2?'#f00':'')
+                                }">
+                                <i style="font-size: 10px;">[{{time2str(t.time)}}]</i>
+                                <i v-if="t.type==1" style="color: #0f0;font-size: 12px;" class="iconfont">&#xe613;</i>
+                                <i v-if="t.type==2" style="color: #f00;font-size: 12px;" class="iconfont">&#xe629;</i>
+                                {{t.value}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    const update = require("../myjs/update")
+
+    const { ipcRenderer, dialog } = require('electron')
+
+    window.electronAPI = {
+        test: (e) => ipcRenderer.send('test', e),
+        mini: () => ipcRenderer.send('mini'),
+        quit: () => ipcRenderer.send('quit'),
+        showMessageBox: (e) => ipcRenderer.send('showMessageBox', e)
+    }
+
+    ipcRenderer.on('updatePr', (e, s, p) => {
+        console.log(s, p);
+        if (s == 'data') {
+            if (p <= 0.5) {
+                app.$data.update.code = '正在下载更新包'
+                app.$data.update.progress = p * 2
+            }
+            else {
+                app.$data.update.code = '正在解压更新包'
+                app.$data.update.progress = (p - 0.5) * 2
+            }
+            // app.data.update.progress = p
+        }
+    });
+
+
+    var app = new Vue({
+        el: '#app',
+        data: {
+            update: {
+                code: '正在核验版本',
+                progress: 0
+            },
+            logindata: {
+                username: "",
+                password: ""
+            },
+            isLoginIn: false,
+            thispage: "插件支持",
+            herolist: {},
+            hero_pos: [
+                { type: 'top', name: '上单', icon: 'icon-pos-top' },
+                { type: 'jungle', name: '打野', icon: 'icon-pos-jungle' },
+                { type: 'mid', name: '中路', icon: 'icon-pos-mid' },
+                { type: 'bottom', name: '下路', icon: 'icon-pos-bot' },
+                { type: 'support', name: '辅助', icon: 'icon-pos-sup' },
+            ],
+            hero_pos_has: '',
+            system_log: []
+        },
+        async mounted() {
+            try {
+                let herolist = await this.httpfetch('./hero_list.js')
+                herolist = herolist.hero
+                let data = await this.httpfetch('./herolist_position.js')
+                data = data.list
+                for (i in herolist) {
+                    let tmp = herolist[i]
+                    let positions = []
+                    for (let n in data[tmp.heroId]) {
+                        positions.push(n)
+                    }
+                    herolist[i].positions = positions
+                }
+                this.herolist = herolist
+            } catch { alert("heroList Download error") }
+            this.system_log = await this.httpfetch("./system_log.json")
+            this.$nextTick(async function () {
+                // this.login()
+                if ($('.left_put').length > 0) {
+                    $('.left .tittle').css("display", 'none')
+                } else {
+                    $('.left .tittle').css("display", 'block')
+                }
+                this.update.progress = 0.5
+                if (await update.checkupdate()) {
+                    this.update.code = '正在下载更新包'
+                    this.update.progress = 0
+                    ipcRenderer.send('updateVer')
+                    // this.update.update = true
+                } else {
+                    this.update.progress = 1
+                    $('.update').animate({ 'opacity': '0' }, 200)
+                    setTimeout(() => {
+                        $('.update').css('display', 'none')
+                        $('.login').css('display', 'flex')
+                        $('.login').animate({ 'opacity': '1' }, 500)
+                    }, 200)
+
+                }
+            })
+        },
+        methods: {
+            mini() {
+                window.electronAPI.mini()
+            },
+            quit() {
+                window.electronAPI.quit()
+            },
+            time2str(time) {
+                let d = new Date(time)
+                return d.getFullYear() + '/'
+                    + (d.getMonth() + 1) + '/'
+                    + (d.getDay() + 1) + ' '
+                    + d.getHours() + ':' + d.getMinutes()
+            },
+            herolistbox_canshowit(hero) {
+                return (!!this.hero_pos_has ? hero.positions.indexOf(this.hero_pos_has) >= 0 : true)
+            },
+            async heroPosChange(e) {
+                $(".tab_item_it").removeClass("tab_item_it")
+                let target = $(e.target)
+                target.addClass("tab_item_it")
+                this.hero_pos_has = target.attr('type') || ''
+            },
+            async login() {
+                let info = await this.httpfetchPost("http://104.168.140.143:888/api/token",
+                    { identification: this.logindata.username, password: this.logindata.password })
+                if (info.errors) {
+                    console.log(info.errors)
+                    window.electronAPI.showMessageBox({
+                        title: "错误",
+                        type: "error",
+                        message: info.errors[0].code
+                    })
+                    return
+                }
+
+                this.isLoginIn = true
+                $('body').css('overflow', 'hidden')
+                $("#bgvid").css('filter', 'blur(5px)');
+                $(".login").animate({ 'padding-left': 1000 }, 0)
+                $('.login').animate({ 'opacity': 0 }, 0)
+                $(".left").css('top', '-100vh')
+                $(".left").animate({ 'top': '0' }, 1000)
+                $('.left .button_box').css('left', '-200%')
+                $('.main').animate({ 'opacity': 1 }, 2000)
+                $(".right").css('padding-left', '50px')
+                $(".right").css('opacity', '0')
+                setTimeout(() => {
+                    $(".left .button_box").animate({ 'left': '0' }, 500)
+                    $(".login").css('display', 'none')
+                    $('.main').css("z-index", 0)
+                    $(".right").animate({ 'padding-left': '20px', 'opacity': '1' }, 500)
+                }, 1500)
+            },
+            async pageChange(e) {
+                $(".button_box_in").removeClass("button_box_in")
+                let target = $(e.path[e.path.length - 8])
+                target.addClass("button_box_in")
+                if (this.thispage == target.context.querySelector(".tittle").innerText) return
+                this.thispage = target.context.querySelector(".tittle").innerText
+                $(".right .page").css('padding-left', '50px')
+                $(".right .page").css('opacity', '0')
+                $(".right .page").animate({
+                    'padding-left': '20px',
+                    'opacity': '1'
+                }, 200)
+            },
+            async main_left_auto_put(e) {
+                if (e.offsetX + 10 > e.target.offsetWidth) {
+                    let target = $(".main>.left")
+                    if (e.offsetX < 100) {
+                        target.removeClass("left_put")
+                        setTimeout(() => {
+                            $('.left .tittle').css("display", 'block')
+                        }, 200);
+                    }
+                    else {
+                        target.addClass("left_put")
+                        $('.left .tittle').css("display", 'none')
+                    }
+                }
+            },
+            async httpfetch(url, _callback) {
+                let data = {}
+                try {
+                    let tmp = await fetch(url)
+                    data = (await tmp.json())
+                } catch (e) { }
+                if (_callback) _callback(data);
+                return data
+            },
+            async httpfetchPost(url, body, _callback) {
+                let data = {}
+                try {
+                    let tmp = await fetch(url, {
+                        method: 'post',
+                        body: JSON.stringify(body),
+                        headers: {
+                            "Content-Type": "application/json"
+                        }
+                    })
+                    data = (await tmp.json())
+                } catch (e) { }
+                if (_callback) _callback(data);
+                return data
+            }
+        }
+    })
+</script>
+
+</html>

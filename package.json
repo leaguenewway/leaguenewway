@@ -1,0 +1,26 @@
+{
+	"devDependencies": {
+		"electron": "^19.0.0-beta.3",
+		"electron-packager": "^15.5.1"
+	},
+	"scripts": {
+		"start": "electron .",
+		"pack": "electron-packager ./ testapp --win --out ./outputs"
+	},
+	"name": "electron",
+	"version": "1.0.0",
+	"main": "main.js",
+	"author": "",
+	"license": "ISC",
+	"description": "",
+	"dependencies": {
+		"axios": "^0.27.2",
+		"ffi-napi": "^4.0.3",
+		"iconv-lite": "^0.6.3",
+		"ini": "^3.0.0",
+		"node-stream-zip": "^1.15.0",
+		"node-wmic": "^2.0.0",
+		"ref-napi": "^3.0.3",
+		"ref-struct-di": "^1.1.1"
+	}
+}

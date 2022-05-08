@@ -1,0 +1,2 @@
+^..\..\..\deps\libffi\src\x86\sysv_intel.preasm
+^Release\obj\ffi\\sysv_intel.asm

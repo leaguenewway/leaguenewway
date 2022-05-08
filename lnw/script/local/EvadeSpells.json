@@ -1,0 +1,526 @@
+{
+    "Karma": [
+        {
+            "danger": 3,
+            "icon": "KarmaE",
+            "type": 2,
+            "slot": 2,
+            "name": "KarmaE-",
+            "displayName": "Inspire"
+        }
+    ],
+    "Vayne": [
+        {
+            "danger": 2,
+            "icon": "VayneQ",
+            "slot": 0,
+            "type": 1,
+            "range": 300,
+            "name": "VayneQ-",
+            "displayName": "Tumble"
+        }
+    ],
+    "Vladimir": [
+        {
+            "danger": 3,
+            "icon": "VladimirW",
+            "type": 3,
+            "slot": 1,
+            "name": "VladimirW-",
+            "displayName": "Sanguine Pool"
+        }
+    ],
+    "Sejuani": [
+        {
+            "danger": 3,
+            "icon": "SejuaniQ",
+            "type": 1,
+            "slot": 0,
+            "name": "SejuaniQ-",
+            "displayName": "Arctic Assault"
+        }
+    ],
+    "Volibear": [
+        {
+            "danger": 3,
+            "icon": "VolibearQ",
+            "type": 2,
+            "slot": 0,
+            "name": "VolibearQ-",
+            "displayName": "Rolling Thunder"
+        }
+    ],
+    "Morgana": [
+        {
+            "danger": 2,
+            "icon": "MorganaE",
+            "type": 5,
+            "slot": 2,
+            "name": "MorganaE-",
+            "displayName": "Black Shield"
+        }
+    ],
+    "Kennen": [
+        {
+            "danger": 3,
+            "icon": "KennenE",
+            "type": 2,
+            "slot": 2,
+            "name": "KennenE-",
+            "displayName": "Lightning Rush"
+        }
+    ],
+    "Fizz": [
+        {
+            "danger": 3,
+            "icon": "FizzR",
+            "type": 3,
+            "slot": 2,
+            "name": "FizzE-",
+            "displayName": "Playful"
+        }
+    ],
+    "Skarner": [
+        {
+            "danger": 3,
+            "icon": "SkarnerW",
+            "type": 2,
+            "slot": 1,
+            "name": "SkarnerW-",
+            "displayName": "Crystalline Exoskeleton"
+        }
+    ],
+    "Kled": [
+        {
+            "danger": 3,
+            "icon": "KledE",
+            "slot": 2,
+            "type": 1,
+            "range": 550,
+            "name": "KledE-",
+            "displayName": "Jousting"
+        }
+    ],
+    "Ahri": [
+        {
+            "danger": 4,
+            "icon": "AhriR",
+            "slot": 3,
+            "type": 1,
+            "range": 450,
+            "name": "AhriQ-",
+            "displayName": "Spirit Rush"
+        }
+    ],
+    "Lucian": [
+        {
+            "danger": 3,
+            "icon": "LucianE",
+            "slot": 2,
+            "type": 1,
+            "range": 425,
+            "name": "LucianE-",
+            "displayName": "Relentless Pursuit"
+        }
+    ],
+    "Leblanc": [
+        {
+            "danger": 3,
+            "icon": "LeblancW",
+            "slot": 1,
+            "type": 1,
+            "range": 600,
+            "name": "LeblancW-",
+            "displayName": "Distortion"
+        }
+    ],
+    "Zed": [
+        {
+            "danger": 4,
+            "icon": "ZedR",
+            "slot": 3,
+            "type": 4,
+            "range": 625,
+            "name": "ZedR-",
+            "displayName": "Death Mark"
+        }
+    ],
+    "Graves": [
+        {
+            "danger": 1,
+            "icon": "GravesE",
+            "slot": 2,
+            "type": 1,
+            "range": 425,
+            "name": "GravesE-",
+            "displayName": "Quickdraw"
+        }
+    ],
+    "MasterYi": [
+        {
+            "danger": 3,
+            "icon": "MasterYiQ",
+            "slot": 0,
+            "type": 4,
+            "range": 600,
+            "name": "MasterYiQ-",
+            "displayName": "Alpha Strike"
+        }
+    ],
+    "Kayn": [
+        {
+            "danger": 2,
+            "icon": "KaynQ",
+            "type": 1,
+            "slot": 0,
+            "name": "KaynQ-",
+            "displayName": "Reaping Slash"
+        }
+    ],
+    "Sona": [
+        {
+            "danger": 3,
+            "icon": "SonaE",
+            "type": 2,
+            "slot": 2,
+            "name": "SonaE-",
+            "displayName": "Song of Celerity"
+        }
+    ],
+    "Zilean": [
+        {
+            "danger": 3,
+            "icon": "ZileanE",
+            "type": 2,
+            "slot": 2,
+            "name": "ZileanE-",
+            "displayName": "Time Warp"
+        }
+    ],
+    "Gnar": [
+        {
+            "danger": 3,
+            "icon": "GnarE",
+            "slot": 2,
+            "type": 1,
+            "range": 475,
+            "name": "GnarE-",
+            "displayName": "Hop\/Crunch"
+        }
+    ],
+    "Rakan": [
+        {
+            "danger": 3,
+            "icon": "RakanW",
+            "slot": 1,
+            "type": 1,
+            "range": 600,
+            "name": "RakanW-",
+            "displayName": "Grand Entrance"
+        }
+    ],
+    "Teemo": [
+        {
+            "danger": 3,
+            "icon": "TeemoW",
+            "type": 2,
+            "slot": 1,
+            "name": "TeemoW-",
+            "displayName": "Move Quick"
+        }
+    ],
+    "Draven": [
+        {
+            "danger": 3,
+            "icon": "DravenW",
+            "type": 2,
+            "slot": 1,
+            "name": "DravenW-",
+            "displayName": "Blood Rush"
+        }
+    ],
+    "Rumble": [
+        {
+            "danger": 2,
+            "icon": "RumbleW",
+            "type": 2,
+            "slot": 1,
+            "name": "RumbleW-",
+            "displayName": "Scrap Shield"
+        }
+    ],
+    "Kindred": [
+        {
+            "danger": 1,
+            "icon": "KindredQ",
+            "slot": 0,
+            "type": 1,
+            "range": 340,
+            "name": "KindredQ-",
+            "displayName": "Dance of Arrows"
+        }
+    ],
+    "Udyr": [
+        {
+            "danger": 1,
+            "icon": "UdyrE",
+            "type": 2,
+            "slot": 2,
+            "name": "UdyrE-",
+            "displayName": "Bear Stance"
+        }
+    ],
+    "Sivir": [
+        {
+            "danger": 2,
+            "icon": "SivirE",
+            "type": 5,
+            "slot": 2,
+            "name": "SivirE-",
+            "displayName": "Spell Shield"
+        }
+    ],
+    "Khazix": [
+        {
+            "danger": 3,
+            "icon": "KhazixE",
+            "slot": 2,
+            "type": 1,
+            "range": 700,
+            "name": "KhazixE-",
+            "displayName": "Leap"
+        }
+    ],
+    "Riven": [
+        {
+            "danger": 2,
+            "icon": "RivenE",
+            "slot": 2,
+            "type": 1,
+            "range": 325,
+            "name": "RivenE-",
+            "displayName": "Valor"
+        }
+    ],
+    "Tryndamere": [
+        {
+            "danger": 3,
+            "icon": "TryndamereE",
+            "slot": 2,
+            "type": 1,
+            "range": 660,
+            "name": "TryndamereE-",
+            "displayName": "Spinning Slash"
+        }
+    ],
+    "Ezreal": [
+        {
+            "danger": 3,
+            "icon": "EzrealE",
+            "slot": 2,
+            "type": 1,
+            "range": 475,
+            "name": "EzrealE-",
+            "displayName": "Arcane Shift"
+        }
+    ],
+    "Corki": [
+        {
+            "danger": 4,
+            "icon": "CorkiW",
+            "slot": 1,
+            "type": 1,
+            "range": 600,
+            "name": "CorkiW-",
+            "displayName": "Valkyrie"
+        }
+    ],
+    "Blitzcrank": [
+        {
+            "danger": 3,
+            "icon": "BlitzcrankW",
+            "type": 2,
+            "slot": 1,
+            "name": "BlitzcrankW-",
+            "displayName": "Overdrive"
+        }
+    ],
+    "Kassadin": [
+        {
+            "danger": 3,
+            "icon": "KassadinR",
+            "slot": 3,
+            "type": 1,
+            "range": 500,
+            "name": "KassadinR-",
+            "displayName": "Riftwalk"
+        }
+    ],
+    "Katarina": [
+        {
+            "danger": 3,
+            "icon": "KatarinaW",
+            "type": 2,
+            "slot": 1,
+            "name": "KatarinaW-",
+            "displayName": "Preparation"
+        }
+    ],
+    "Ekko": [
+        {
+            "danger": 2,
+            "icon": "EkkoE",
+            "slot": 2,
+            "type": 1,
+            "range": 325,
+            "name": "EkkoE-",
+            "displayName": "Phase Dive"
+        }
+    ],
+    "Shyvana": [
+        {
+            "danger": 3,
+            "icon": "ShyvanaW",
+            "type": 2,
+            "slot": 1,
+            "name": "ShyvanaW-",
+            "displayName": "Burnout"
+        }
+    ],
+    "Pyke": [
+        {
+            "danger": 3,
+            "icon": "PykeE",
+            "slot": 2,
+            "type": 1,
+            "range": 550,
+            "name": "PykeE-",
+            "displayName": "Phantom Undertow"
+        }
+    ],
+    "Shaco": [
+        {
+            "danger": 3,
+            "icon": "ShacoQ",
+            "slot": 0,
+            "type": 1,
+            "range": 400,
+            "name": "ShacoQ-",
+            "displayName": "Deceive"
+        }
+    ],
+    "Renekton": [
+        {
+            "danger": 3,
+            "icon": "RenektonE",
+            "slot": 2,
+            "type": 1,
+            "range": 450,
+            "name": "RenektonE-",
+            "displayName": "Slice and Dice"
+        }
+    ],
+    "Shen": [
+        {
+            "danger": 4,
+            "icon": "ShenE",
+            "slot": 2,
+            "type": 1,
+            "range": 600,
+            "name": "ShenE-",
+            "displayName": "Shadow Dash"
+        }
+    ],
+    "Annie": [
+        {
+            "danger": 2,
+            "icon": "AnnieE",
+            "type": 2,
+            "slot": 2,
+            "name": "AnnieE-",
+            "displayName": "Molten Shield"
+        }
+    ],
+    "Xayah": [
+        {
+            "danger": 5,
+            "icon": "XayahR",
+            "type": 3,
+            "slot": 3,
+            "name": "XayahR-",
+            "displayName": "Featherstorm"
+        }
+    ],
+    "Garen": [
+        {
+            "danger": 3,
+            "icon": "GarenQ",
+            "type": 2,
+            "slot": 0,
+            "name": "GarenQ-",
+            "displayName": "Decisive Strike"
+        }
+    ],
+    "Gragas": [
+        {
+            "danger": 3,
+            "icon": "GragasE",
+            "slot": 2,
+            "type": 1,
+            "range": 600,
+            "name": "GragasE-",
+            "displayName": "Body Slam"
+        }
+    ],
+    "Fiora": [
+        {
+            "danger": 1,
+            "icon": "FioraQ",
+            "slot": 0,
+            "type": 1,
+            "range": 400,
+            "name": "FioraQ-",
+            "displayName": "Lunge"
+        },
+        {
+            "danger": 2,
+            "icon": "FioraW",
+            "slot": 1,  
+            "type": 7,
+            "range": 750,
+            "name": "FioraW-",
+            "displayName": "Riposte"
+        }
+    ],
+    "Kaisa": [
+        {
+            "danger": 2,
+            "icon": "KaisaE",
+            "type": 2,
+            "slot": 2,
+            "name": "KaisaE-",
+            "displayName": "Supercharge"
+        }
+    ],
+    "Vi": [
+        {
+            "danger": 3,
+            "icon": "ViQ",
+            "slot": 0,
+            "type": 1,
+            "range": 250,
+            "name": "ViQ-",
+            "displayName": "Vault Breaker"
+        }
+    ],
+    "Yasuo": [
+        {
+            "danger": 2,
+            "icon": "YasuoW",
+            "type": 6,
+            "slot": 1,
+            "name": "YasuoW-",
+            "displayName": "Wind Wall"
+        }
+    ]
+}
